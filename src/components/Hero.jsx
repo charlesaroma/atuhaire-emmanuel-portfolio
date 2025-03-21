@@ -55,18 +55,18 @@ const Hero = () => {
             </p>
 
             {/* ===== CALL TO ACTION BUTTONS ===== */}
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 items-center justify-center lg:justify-start">
               <MotionDiv
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-transparent cursor-pointer border-2 border-[var(--color-accent-500)] text-[var(--color-accent-500)] px-4 py-2 sm:px-6 md:px-8 md:py-3 rounded-lg text-base sm:text-lg font-medium flex items-center"
+                className="bg-transparent cursor-pointer border-2 border-[var(--color-accent-500)] text-[var(--color-accent-500)] py-2  px-4 md:px-8 md:py-3 rounded-lg text-base sm:text-lg font-medium flex items-center w-auto justify-center"
               >
                 Watch Reel <Play size={18} className="ml-2" />
               </MotionDiv>
               <MotionDiv
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="text-[var(--color-accent-600)] cursor-pointer px-4 py-2 sm:px-6 md:px-8 md:py-3 rounded-lg text-base sm:text-lg font-normal flex items-center"
+                className="text-[var(--color-accent-600)] cursor-pointer px-4 py-2 sm:px-6 md:px-8 md:py-3 rounded-lg text-base sm:text-lg font-normal flex items-center w-full sm:w-auto justify-center"
               >
                 Contact Me 
               </MotionDiv>
