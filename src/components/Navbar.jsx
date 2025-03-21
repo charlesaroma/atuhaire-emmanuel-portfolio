@@ -157,35 +157,48 @@ const Navbar = () => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <MotionDiv
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 w-full bg-[--color-accent-dark]/90 backdrop-blur-md"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 top-[72px] bg-[--color-accent-dark]/90 backdrop-blur-md flex flex-col items-center justify-center"
           >
-            <div className="px-6 py-4">
+            <div className="flex flex-col items-center space-y-8 w-full px-6">
               {navLinks.map((link) => (
-                <Link
+                <MotionLink
                   key={link.path}
                   to={link.path}
-                  className="block py-3 text-gray-300 hover:text-white transition"
+                  className={`text-2xl relative pb-2 transition-colors duration-300 ${
+                    location.pathname === link.path 
+                      ? "text-[var(--color-secondary-400)] font-medium" 
+                      : "text-gray-300 hover:text-white"
+                  }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
-                </Link>
+                  <motion.span
+                    className="absolute left-0 -bottom-0 w-full h-[2px] bg-[var(--color-secondary-400)]"
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: location.pathname === link.path ? 1 : 0 }}
+                    whileHover={{ scaleX: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </MotionLink>
               ))}
 
               {/* Social Media Icons (Mobile) */}
-              <div className="flex justify-center space-x-6 mt-4">
+              <div className="flex justify-center space-x-8 mt-12">
                 {socialLinks.map((social, index) => (
-                  <a 
+                  <MotionA
                     key={index} 
                     href={social.url} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="text-gray-300 hover:text-[--color-primary] transition"
+                    className="text-gray-300 hover:text-[--color-primary] transition-colors duration-300"
+                    whileHover={{ scale: 1.2, rotate: 360 }}
+                    whileTap={{ scale: 0.9 }}
                   >
                     {social.icon}
-                  </a>
+                  </MotionA>
                 ))}
               </div>
             </div>
