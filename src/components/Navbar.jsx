@@ -82,7 +82,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed w-full z-[9999] transition-all duration-300 ${
-        isScrolled
+        isScrolled || isMobileMenuOpen
           ? "bg-[--color-accent-dark]/90 backdrop-blur-lg shadow-md"
           : "bg-transparent"
       }`}
@@ -154,7 +154,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className="container flex-col mx-auto px-6 py-4 flex justify-between items-center relative z-[9999]">
+      <div className="container flex-col md:hidden mx-auto px-6 py-4 flex justify-between items-center relative z-[9999]">
         {/* Mobile Menu Button */}
         <div className="min-h-[40px] flex items-center justify-between w-full">
           {/* Logo */}
