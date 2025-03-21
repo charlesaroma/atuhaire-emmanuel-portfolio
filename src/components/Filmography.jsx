@@ -61,7 +61,8 @@ const Filmography = () => {
     <div className="w-full  bg-[--color-accent-dark] py-20 relative overflow-x-hidden">      
       <div className="container mx-auto px-10 relative z-10 overflow-x-hidden">
         <h2 className="text-4xl font-normal text-[var(--color-accent-500)] mb-12 text-center">Featured Works</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4  overflow-x-hidden mx-auto gap-6 gap-y-12 h-max">
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 gap-y-12">
           {projects.map((project, index) => (
             <MotionDiv
               key={index}
@@ -69,9 +70,9 @@ const Filmography = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group cursor-pointer"
+              className="group cursor-pointer mx-auto w-full max-w-[280px]"
             >
-              <div className="aspect-video h-[400px] max-w-[280px]  rounded-lg overflow-hidden mb-4 bg-black">
+              <div className="h-[400px] rounded-lg overflow-hidden mb-4 bg-black">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -79,8 +80,8 @@ const Filmography = () => {
                   loading={index > 2 ? "lazy" : "eager"}
                 />
               </div>
-              <h3 className="text-xl font-semibold text-white">{project.title}</h3>
-              <p className="text-gray-300">{project.category} • {project.year}</p>
+              <h3 className="text-xl font-semibold text-white text-center md:text-left">{project.title}</h3>
+              <p className="text-gray-300 text-center md:text-left">{project.category} • {project.year}</p>
             </MotionDiv>
           ))}
         </div>
