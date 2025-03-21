@@ -13,7 +13,7 @@ import Footer from './components/Footer'
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-[var(--color-primary)] text-text flex flex-col">
+      <div className="min-h-screen relative bg-[var(--color-primary)] text-text flex flex-col">
         <Navbar />
         <main className="flex-grow">
           <Routes>

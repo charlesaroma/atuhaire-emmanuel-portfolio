@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 // Fix linter warning
 const MotionDiv = motion.div;
 const MotionButton = motion.button;
+const MotionLink = motion(Link);
 
 const About = () => {
   return (
@@ -61,7 +63,7 @@ const About = () => {
               </h2>
             </div>
 
-            <p className="text-[var(--color-accent-600)] leading-relaxed text-sm md:text-base">
+            <p className="text-[var(--color-accent-600)] leading-relaxed text-justify md:text-left text-sm md:text-base">
               Atuhaire Emmanuel Abala is an award-winning Ugandan actor with a
               powerful screen presence. His notable performances in{" "}
               <span className="text-[var(--color-secondary-400)]">
@@ -79,19 +81,22 @@ const About = () => {
               craft.
             </p>
 
-            <p className="text-[var(--color-accent-600)] leading-relaxed text-sm md:text-base">
+            <p className="text-[var(--color-accent-600)] leading-relaxed text-justify md:text-left text-sm md:text-base">
               With training in both classical and contemporary acting
               techniques, Emmanuel brings authenticity and depth to every role
               he embodies, making him one of Uganda's most promising talents.
             </p>
 
-            <MotionButton
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="group bg-transparent border border-[--color-primary] hover:bg-[--color-primary] text-white px-5 py-2 md:px-6 md:py-2 rounded-lg font-medium flex items-center mt-2 text-sm transition-all duration-300 shadow-[0_4px_6px_-1px_rgba(123,97,255,0.1)]"
-            >
-              <span>DISCOVER MORE</span>
-            </MotionButton>
+            <div className="flex justify-center md:justify-start w-full">
+              <MotionLink
+                to="/portfolio"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="group bg-transparent border border-[--color-primary] hover:bg-[--color-primary] text-white px-5 py-2 md:px-6 md:py-2 rounded-lg font-medium flex items-center mt-2 text-sm transition-all duration-300 shadow-[0_4px_6px_-1px_rgba(123,97,255,0.1)]"
+              >
+                <span>DISCOVER MORE</span>
+              </MotionLink>
+            </div>
           </MotionDiv>
         </div>
       </div>

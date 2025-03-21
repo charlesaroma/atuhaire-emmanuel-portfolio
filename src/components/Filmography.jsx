@@ -58,8 +58,8 @@ const projects = [
 
 const Filmography = () => {
   return (
-    <div className="w-full  bg-[--color-accent-dark] py-20 relative overflow-x-hidden">      
-      <div className="container mx-auto px-10 relative z-10 overflow-x-hidden">
+    <div className="w-full  bg-[--color-accent-dark] py-20 relative overflow-hidden">      
+      <div className="container mx-auto px-10 relative z-10 overflow-hidden">
         <h2 className="text-4xl font-normal text-[var(--color-accent-500)] mb-12 text-center">Featured Works</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 gap-y-12">

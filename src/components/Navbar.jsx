@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  Menu, 
-  X as MenuX, 
-  Linkedin, 
+import {
+  Menu,
+  X as MenuX,
+  Linkedin,
   Instagram,
   Home,
   Film,
   Image as GalleryIcon,
-  MessageSquare
+  MessageSquare,
 } from "lucide-react";
 
 // Fix linter warning by using the motion import
@@ -19,10 +19,10 @@ const MotionLink = motion(Link);
 
 // Custom X (Twitter) Icon
 const XIcon = ({ size = 24, className }) => (
-  <svg 
-    viewBox="0 0 24 24" 
-    width={size} 
-    height={size} 
+  <svg
+    viewBox="0 0 24 24"
+    width={size}
+    height={size}
     className={className}
     fill="currentColor"
   >
@@ -32,10 +32,10 @@ const XIcon = ({ size = 24, className }) => (
 
 // Custom TikTok Icon
 const TikTokIcon = ({ size = 24, className }) => (
-  <svg 
-    viewBox="0 0 24 24" 
-    width={size} 
-    height={size} 
+  <svg
+    viewBox="0 0 24 24"
+    width={size}
+    height={size}
     className={className}
     fill="currentColor"
   >
@@ -56,10 +56,19 @@ const Navbar = () => {
   ];
 
   const socialLinks = [
-    { icon: <Linkedin size={20} />, url: "https://www.linkedin.com/in/emmanuel-atuhaire-b0a90330b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-    { icon: <Instagram size={20} />, url: "https://www.instagram.com/emmanuel.atuhaire.3?igsh=b2Nqb2x1Y3owaWI=" },
+    {
+      icon: <Linkedin size={20} />,
+      url: "https://www.linkedin.com/in/emmanuel-atuhaire-b0a90330b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    {
+      icon: <Instagram size={20} />,
+      url: "https://www.instagram.com/emmanuel.atuhaire.3?igsh=b2Nqb2x1Y3owaWI=",
+    },
     { icon: <XIcon size={20} />, url: "https://x.com/AtuhaireEmma?s=09" },
-    { icon: <TikTokIcon size={20} />, url: "https://www.tiktok.com/@emmanuelatuhaire7?_t=ZM-8uqVri9J0CN&_r=1" },
+    {
+      icon: <TikTokIcon size={20} />,
+      url: "https://www.tiktok.com/@emmanuelatuhaire7?_t=ZM-8uqVri9J0CN&_r=1",
+    },
   ];
 
   useEffect(() => {
@@ -72,20 +81,20 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-[--color-accent-dark]/90 backdrop-blur-lg shadow-md" 
+      className={`fixed w-full z-[9999] transition-all duration-300 ${
+        isScrolled
+          ? "bg-[--color-accent-dark]/90 backdrop-blur-lg shadow-md"
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="hidden container mx-auto px-6 py-4 md:flex justify-between items-center relative z-[9999]">
         {/* Logo */}
-        <MotionLink 
-          to="/" 
+        <MotionLink
+          to="/"
           className="flex items-center gap-2 group relative"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-        >       
+        >
           <span className="text-2xl font-medium text-[var(--color-secondary-50)] tracking-wide relative">
             Atuhaire
             <motion.span
@@ -105,7 +114,9 @@ const Navbar = () => {
               key={link.path}
               to={link.path}
               className={`text-[var(--color-secondary-200)] text-lg transition relative pb-2 ${
-                location.pathname === link.path ? "text-[var(--color-secondary-400)] text-xl font-medium" : ""
+                location.pathname === link.path
+                  ? "text-[var(--color-secondary-400)] text-xl font-medium"
+                  : ""
               }`}
             >
               {link.name}
@@ -129,10 +140,10 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-[var(--color-secondary-50)] hover:text-[var(--color-secondary-400)] transition relative"
-              whileHover={{ 
+              whileHover={{
                 scale: 1.2,
                 rotate: 360,
-                transition: { duration: 0.3 }
+                transition: { duration: 0.3 },
               }}
               whileTap={{ scale: 0.9 }}
             >
@@ -140,71 +151,99 @@ const Navbar = () => {
             </MotionA>
           ))}
         </div>
-
-        {/* Mobile Menu Button */}
-        <MotionDiv
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="md:hidden"
-        >
-          <button className="text-white" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-            {isMobileMenuOpen ? <MenuX size={24} /> : <Menu size={24} />}
-          </button>
-        </MotionDiv>
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <MotionDiv
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 top-[72px] bg-[--color-accent-dark]/90 backdrop-blur-md flex flex-col items-center justify-center"
+      <div className="container flex-col mx-auto px-6 py-4 flex justify-between items-center relative z-[9999]">
+        {/* Mobile Menu Button */}
+        <div className="min-h-[40px] flex items-center justify-between w-full">
+          {/* Logo */}
+          <MotionLink
+            to="/"
+            className="flex items-center gap-2 group relative"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <div className="flex flex-col items-center space-y-8 w-full px-6">
-              {navLinks.map((link) => (
-                <MotionLink
-                  key={link.path}
-                  to={link.path}
-                  className={`text-2xl relative pb-2 transition-colors duration-300 ${
-                    location.pathname === link.path 
-                      ? "text-[var(--color-secondary-400)] font-medium" 
-                      : "text-gray-300 hover:text-white"
-                  }`}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.name}
-                  <motion.span
-                    className="absolute left-0 -bottom-0 w-full h-[2px] bg-[var(--color-secondary-400)]"
-                    initial={{ scaleX: 0 }}
-                    animate={{ scaleX: location.pathname === link.path ? 1 : 0 }}
-                    whileHover={{ scaleX: 1 }}
-                    transition={{ duration: 0.3 }}
-                  />
-                </MotionLink>
-              ))}
-
-              {/* Social Media Icons (Mobile) */}
-              <div className="flex justify-center space-x-8 mt-12">
-                {socialLinks.map((social, index) => (
-                  <MotionA
-                    key={index} 
-                    href={social.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-gray-300 hover:text-[--color-primary] transition-colors duration-300"
-                    whileHover={{ scale: 1.2, rotate: 360 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    {social.icon}
-                  </MotionA>
-                ))}
-              </div>
-            </div>
+            <span className="text-2xl font-medium text-[var(--color-secondary-50)] tracking-wide relative">
+              Atuhaire
+              <motion.span
+                className="absolute left-0 bottom-0 w-full h-[2px] bg-[var(--color-secondary-400)]"
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 0 }}
+                whileHover={{ scaleX: 1 }}
+                transition={{ duration: 0.3 }}
+              />
+            </span>
+          </MotionLink>
+          <MotionDiv
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="md:hidden"
+          >
+            {/* Button */}
+            <button
+              className="text-white"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <MenuX size={24} /> : <Menu size={24} />}
+            </button>
           </MotionDiv>
-        )}
-      </AnimatePresence>
+        </div>
+
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <MotionDiv
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="inset-0 h-screen w-screen bg-[--color-accent-dark]/80 backdrop-blur-md flex flex-col items-center justify-center z-[9998]"
+            >
+              <div className="flex flex-col items-center space-y-8 w-full px-6">
+                {navLinks.map((link) => (
+                  <MotionLink
+                    key={link.path}
+                    to={link.path}
+                    className={`text-2xl relative pb-2 transition-colors duration-300 ${
+                      location.pathname === link.path
+                        ? "text-[var(--color-secondary-400)] font-medium"
+                        : "text-gray-300 hover:text-white"
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.name}
+                    <motion.span
+                      className="absolute left-0 -bottom-0 w-full h-[2px] bg-[var(--color-secondary-400)]"
+                      initial={{ scaleX: 0 }}
+                      animate={{
+                        scaleX: location.pathname === link.path ? 1 : 0,
+                      }}
+                      whileHover={{ scaleX: 1 }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </MotionLink>
+                ))}
+
+                {/* Social Media Icons (Mobile) */}
+                <div className="flex justify-center space-x-8 mt-12">
+                  {socialLinks.map((social, index) => (
+                    <MotionA
+                      key={index}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-300 hover:text-[--color-primary] transition-colors duration-300"
+                      whileHover={{ scale: 1.2, rotate: 360 }}
+                      whileTap={{ scale: 0.9 }}
+                    >
+                      {social.icon}
+                    </MotionA>
+                  ))}
+                </div>
+              </div>
+            </MotionDiv>
+          )}
+        </AnimatePresence>
+      </div>
     </nav>
   );
 };
