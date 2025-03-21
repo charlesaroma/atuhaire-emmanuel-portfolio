@@ -1,11 +1,47 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Linkedin, Instagram, Twitter, Music } from "lucide-react";
+import { 
+  Menu, 
+  X as MenuX, 
+  Linkedin, 
+  Instagram,
+  Home,
+  Film,
+  Image as GalleryIcon,
+  MessageSquare
+} from "lucide-react";
 
 // Fix linter warning by using the motion import
 const MotionDiv = motion.div;
 const MotionA = motion.a;
+const MotionLink = motion(Link);
+
+// Custom X (Twitter) Icon
+const XIcon = ({ size = 24, className }) => (
+  <svg 
+    viewBox="0 0 24 24" 
+    width={size} 
+    height={size} 
+    className={className}
+    fill="currentColor"
+  >
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
+
+// Custom TikTok Icon
+const TikTokIcon = ({ size = 24, className }) => (
+  <svg 
+    viewBox="0 0 24 24" 
+    width={size} 
+    height={size} 
+    className={className}
+    fill="currentColor"
+  >
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+  </svg>
+);
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,14 +52,14 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "Portfolio", path: "/portfolio" },
     { name: "Gallery", path: "/gallery" },
-    { name: "Contact", path: "/contact" },
+    { name: "Contact Me", path: "/contact" },
   ];
 
   const socialLinks = [
     { icon: <Linkedin size={20} />, url: "https://www.linkedin.com/in/emmanuel-atuhaire-b0a90330b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
     { icon: <Instagram size={20} />, url: "https://www.instagram.com/emmanuel.atuhaire.3?igsh=b2Nqb2x1Y3owaWI=" },
-    { icon: <Twitter size={20} />, url: "https://x.com/AtuhaireEmma?s=09" },
-    { icon: <Music size={20} />, url: "https://www.tiktok.com/@emmanuelatuhaire7?_t=ZM-8uqVri9J0CN&_r=1" },
+    { icon: <XIcon size={20} />, url: "https://x.com/AtuhaireEmma?s=09" },
+    { icon: <TikTokIcon size={20} />, url: "https://www.tiktok.com/@emmanuelatuhaire7?_t=ZM-8uqVri9J0CN&_r=1" },
   ];
 
   useEffect(() => {
@@ -44,27 +80,43 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <Link 
+        <MotionLink 
           to="/" 
-          className="flex items-center gap-2 group"
+          className="flex items-center gap-2 group relative"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
         >       
-          <span className="text-2xl font-medium text-[var(--color-secondary-50)] tracking-wide">
+          <span className="text-2xl font-medium text-[var(--color-secondary-50)] tracking-wide relative">
             Atuhaire
+            <motion.span
+              className="absolute left-0 bottom-0 w-full h-[2px] bg-[var(--color-secondary-400)]"
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 0 }}
+              whileHover={{ scaleX: 1 }}
+              transition={{ duration: 0.3 }}
+            />
           </span>
-        </Link>
+        </MotionLink>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
-            <Link
+            <MotionLink
               key={link.path}
               to={link.path}
-              className={`text-[var(--color-secondary-200)] text-lg hover:text-white transition ${
+              className={`text-[var(--color-secondary-200)] text-lg transition relative pb-2 ${
                 location.pathname === link.path ? "text-[var(--color-secondary-400)] text-xl font-medium" : ""
               }`}
             >
               {link.name}
-            </Link>
+              <motion.span
+                className="absolute left-0 -bottom-0 w-full h-[2px] bg-[var(--color-secondary-400)]"
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: location.pathname === link.path ? 1 : 0 }}
+                whileHover={{ scaleX: 1 }}
+                transition={{ duration: 0.3 }}
+              />
+            </MotionLink>
           ))}
         </div>
 
@@ -76,8 +128,12 @@ const Navbar = () => {
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--color-secondary-50)] hover:text-[var(--color-secondary-400)] transition"
-              whileHover={{ scale: 1.1 }}
+              className="text-[var(--color-secondary-50)] hover:text-[var(--color-secondary-400)] transition relative"
+              whileHover={{ 
+                scale: 1.2,
+                rotate: 360,
+                transition: { duration: 0.3 }
+              }}
               whileTap={{ scale: 0.9 }}
             >
               {social.icon}
@@ -86,9 +142,15 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-white" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <MotionDiv
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="md:hidden"
+        >
+          <button className="text-white" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            {isMobileMenuOpen ? <MenuX size={24} /> : <Menu size={24} />}
+          </button>
+        </MotionDiv>
       </div>
 
       {/* Mobile Menu */}

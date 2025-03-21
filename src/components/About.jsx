@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 
 // Fix linter warning
 const MotionDiv = motion.div;

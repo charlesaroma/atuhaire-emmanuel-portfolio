@@ -894,11 +894,6 @@ ajv@^6.12.4:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-animated-backgrounds@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/animated-backgrounds/-/animated-backgrounds-1.1.0.tgz#9c2b20fb296999dec618a2996322aa90f3381226"
-  integrity sha512-uziMR9m6WTjAvq8hVZ/l4W2liqkf5BwoQ24zjlmkU9PYWZmlZjxxH3msRz9VmD15aoo4kgxJH6ebf/f1414D0g==
-
 ansi-styles@^4.1.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-4.3.0.tgz#edd803628ae71c04c85ae7a0906edad34b648937"
