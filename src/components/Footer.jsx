@@ -92,7 +92,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-[var(--color-primary-900)] backdrop-blur-md border-t border-transparent overflow-hidden">
+    <footer className="relative bg-[var(--color-primary-800)]/10 backdrop-blur-md border-t border-transparent overflow-hidden">
       {/* Decorative Elements */}
       <MotionDiv
         className="absolute -left-20 -top-20 opacity-10 text-[var(--color-secondary-500)]"
@@ -139,7 +139,7 @@ const Footer = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="space-y-4 relative group"
+            className="space-y-4 relative group text-center md:text-left"
           >
             <div className="absolute inset-0 bg-gradient-radial from-[var(--color-secondary-400)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             <h2 className="text-2xl font-medium text-[var(--color-secondary-50)] relative">
@@ -156,7 +156,7 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="space-y-4"
+            className="space-y-4 text-center md:text-left"
           >
             <h3 className="text-lg font-medium text-[var(--color-secondary-50)]">
               Quick Links
@@ -171,7 +171,7 @@ const Footer = () => {
                 >
                   <MotionLink
                     to={link.path}
-                    className="text-[var(--color-secondary-300)] hover:text-[var(--color-secondary-500)] transition-colors duration-300 text-sm flex items-center gap-2"
+                    className="text-[var(--color-secondary-300)] hover:text-[var(--color-secondary-500)] transition-colors duration-300 text-sm flex items-center gap-2 justify-center md:justify-start"
                     whileHover={{ x: 5 }}
                   >
                     <span>•</span> {link.name}
@@ -187,23 +187,23 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="space-y-4"
+            className="space-y-4 text-center md:text-left"
           >
             <h3 className="text-lg font-medium text-[var(--color-secondary-50)]">Contact</h3>
             <ul className="space-y-3">
-              <li className="flex items-center space-x-2 text-[var(--color-secondary-300)] text-sm group">
+              <li className="flex items-center space-x-2 text-[var(--color-secondary-300)] text-sm group justify-center md:justify-start">
                 <Mail size={16} className="group-hover:text-[var(--color-secondary-400)]" />
                 <span className="group-hover:text-[var(--color-secondary-400)] transition-colors duration-300">
                   atuhaire.emmanuel@gmail.com
                 </span>
               </li>
-              <li className="flex items-center space-x-2 text-[var(--color-secondary-300)] text-sm group">
+              <li className="flex items-center space-x-2 text-[var(--color-secondary-300)] text-sm group justify-center md:justify-start">
                 <Phone size={16} className="group-hover:text-[var(--color-secondary-400)]" />
                 <span className="group-hover:text-[var(--color-secondary-400)] transition-colors duration-300">
                   +256 123 456 789
                 </span>
               </li>
-              <li className="flex items-center space-x-2 text-[var(--color-secondary-300)] text-sm group">
+              <li className="flex items-center space-x-2 text-[var(--color-secondary-300)] text-sm group justify-center md:justify-start">
                 <MapPin size={16} className="group-hover:text-[var(--color-secondary-400)]" />
                 <span className="group-hover:text-[var(--color-secondary-400)] transition-colors duration-300">
                   Kampala, Uganda
@@ -218,10 +218,10 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="space-y-4"
+            className="space-y-4 text-center md:text-left"
           >
             <h3 className="text-lg font-medium text-[var(--color-secondary-50)]">Connect</h3>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 justify-center md:justify-start">
               {socialLinks.map((social, index) => (
                 <MotionA
                   key={index}

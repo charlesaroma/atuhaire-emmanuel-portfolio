@@ -8,7 +8,7 @@ const MotionLink = motion(Link);
 
 const About = () => {
   return (
-    <div className="h-screen w-full flex items-center bg-[--color-accent-dark] relative">
+    <div className="h-screen w-full flex items-center bg-[var(--color-primary-800)]/10 relative">
       <div className="w-full flex items-center justify-center mx-auto px-6 md:px-10 relative z-10">
         <div className="grid md:grid-cols-2 gap-4 md:gap-8 items-center w-full place-content-between">
           {/* Left side image collage */}

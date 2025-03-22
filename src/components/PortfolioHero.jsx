@@ -44,10 +44,10 @@ const PortfolioHero = () => {
             <img
               src={heroImages[currentImageIndex]}
               alt="Emmanuel Atuhaire"
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain relative z-10"
             />
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/0 to-var(--color-primary-950)"></div>
+            {/* Gradient overlay - matching Hero.jsx */}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[var(--color-primary-900)] z-20" />
           </motion.div>
         </AnimatePresence>
       </div>
