@@ -37,7 +37,7 @@ const Showreel = () => {
           </div>
         </MotionDiv>
 
-        <p className="text-sm sm:text-base lg:text-lg text-[var(--color-secondary-600)] text-center mt-6 sm:mt-8 lg:mt-10 max-w-2xl mx-auto px-4">
+        <p className="text-sm sm:text-base lg:text-lg text-[var(--color-accent-600)] text-center mt-6 sm:mt-8 lg:mt-10 max-w-2xl mx-auto px-4">
           Experience the highlights of my cinematography work in this showreel. 
           From intimate character moments to sweeping landscapes, this collection 
           showcases my visual storytelling approach.

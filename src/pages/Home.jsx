@@ -11,7 +11,7 @@ const Home = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="w-full min-h-screen bg-[--color-accent-dark]"
+      className="w-full min-h-screen bg-[var(--color-primary-900)]"
     >
       <section className="section">
         <Hero />
@@ -19,7 +19,7 @@ const Home = () => {
       <motion.section className="section" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
         <About />
       </motion.section>
-      <motion.section className="section bg-[--color-accent-light]" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+      <motion.section className="section" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
         <Filmography />
       </motion.section>
       <motion.section className="section" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>

@@ -5,7 +5,10 @@ import {
   Instagram,
   Mail,
   Phone,
-  MapPin
+  MapPin,
+  Clapperboard,
+  Star,
+  Film
 } from "lucide-react";
 
 // Fix linter warning
@@ -64,24 +67,90 @@ const Footer = () => {
     },
   ];
 
+  // Animation variants for floating effect
+  const floatingAnimation = {
+    animate: {
+      y: [0, -10, 0],
+      transition: {
+        duration: 4,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
+    }
+  };
+
+  // Film reel animation
+  const reelAnimation = {
+    animate: {
+      rotate: 360,
+      transition: {
+        duration: 20,
+        repeat: Infinity,
+        ease: "linear"
+      }
+    }
+  };
+
   return (
-    <footer className="relative bg-[--color-primary-900]/80 backdrop-blur-md border-t border-[var(--color-primary-800)]">
-      <div className="container mx-auto px-6 py-12">
+    <footer className="relative bg-[var(--color-primary-900)] backdrop-blur-md border-t border-transparent overflow-hidden">
+      {/* Decorative Elements */}
+      <MotionDiv
+        className="absolute -left-20 -top-20 opacity-10 text-[var(--color-secondary-500)]"
+        animate={reelAnimation.animate}
+      >
+        <Film size={150} />
+      </MotionDiv>
+      
+      <MotionDiv
+        className="absolute -right-10 -bottom-10 opacity-10 text-[var(--color-secondary-500)]"
+        animate={reelAnimation.animate}
+      >
+        <Clapperboard size={120} />
+      </MotionDiv>
+
+      {/* Floating stars */}
+      <MotionDiv
+        className="absolute top-10 right-1/4 opacity-10"
+        animate={floatingAnimation.animate}
+      >
+        <Star 
+          size={40} 
+          className="text-[var(--color-secondary-500)] drop-shadow-[0_0_10px_var(--color-primary-500)] filter-none" 
+        />
+      </MotionDiv>
+      
+      <MotionDiv
+        className="absolute bottom-20 left-1/3 opacity-10"
+        animate={{
+          ...floatingAnimation.animate,
+          transition: { ...floatingAnimation.animate.transition, delay: 1 }
+        }}
+      >
+        <Star 
+          size={70} 
+          className="text-[var(--color-secondary-500)] drop-shadow-[0_0_10px_var(--color-secondary-500)] filter-none" 
+        />
+      </MotionDiv>
+
+      <div className="container mx-auto px-6 py-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {/* Brand Section */}
+          {/* Brand Section with spotlight effect */}
           <MotionDiv
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="space-y-4"
+            className="space-y-4 relative group"
           >
-            <h2 className="text-2xl font-medium text-[var(--color-secondary-50)]">Atuhaire</h2>
+            <div className="absolute inset-0 bg-gradient-radial from-[var(--color-secondary-400)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            <h2 className="text-2xl font-medium text-[var(--color-secondary-50)] relative">
+              Atuhaire
+            </h2>
             <p className="text-[var(--color-secondary-300)] text-sm leading-relaxed">
               Ugandan actor and performer, bringing stories to life through authentic performances and compelling narratives.
             </p>
           </MotionDiv>
 
-          {/* Quick Links */}
+          {/* Quick Links with slide effect */}
           <MotionDiv
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -89,18 +158,25 @@ const Footer = () => {
             transition={{ delay: 0.1 }}
             className="space-y-4"
           >
-            <h3 className="text-lg font-medium text-[var(--color-secondary-50)]">Quick Links</h3>
+            <h3 className="text-lg font-medium text-[var(--color-secondary-50)]">
+              Quick Links
+            </h3>
             <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link.path}>
+              {quickLinks.map((link, index) => (
+                <MotionDiv
+                  key={link.path}
+                  initial={{ x: -20, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ delay: index * 0.1 }}
+                >
                   <MotionLink
                     to={link.path}
-                    className="text-[var(--color-secondary-300)] hover:text-[var(--color-secondary-400)] transition-colors duration-300 text-sm"
+                    className="text-[var(--color-secondary-300)] hover:text-[var(--color-secondary-500)] transition-colors duration-300 text-sm flex items-center gap-2"
                     whileHover={{ x: 5 }}
                   >
-                    {link.name}
+                    <span>•</span> {link.name}
                   </MotionLink>
-                </li>
+                </MotionDiv>
               ))}
             </ul>
           </MotionDiv>
@@ -115,7 +191,7 @@ const Footer = () => {
           >
             <h3 className="text-lg font-medium text-[var(--color-secondary-50)]">Contact</h3>
             <ul className="space-y-3">
-                <li className="flex items-center space-x-2 text-[var(--color-secondary-300)] text-sm group">
+              <li className="flex items-center space-x-2 text-[var(--color-secondary-300)] text-sm group">
                 <Mail size={16} className="group-hover:text-[var(--color-secondary-400)]" />
                 <span className="group-hover:text-[var(--color-secondary-400)] transition-colors duration-300">
                   atuhaire.emmanuel@gmail.com
@@ -167,14 +243,15 @@ const Footer = () => {
           </MotionDiv>
         </div>
 
-        {/* Copyright */}
+        {/* Copyright with film strip effect */}
         <MotionDiv
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mt-12 pt-8 border-t border-[var(--color-primary-800)] text-center"
+          className="mt-12 pt-8 border-t border-[var(--color-accent-500)]/15 text-center relative"
         >
-          <p className="text-[var(--color-secondary-300)] text-sm">
+          <div className="absolute left-0 z-10 right-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-[var(--color-accent-400)]/50 to-transparent" />
+          <p className="text-[var(--color-accent-300)] text-sm">
             © {new Date().getFullYear()} Emmanuel Atuhaire. All rights reserved.
           </p>
         </MotionDiv>

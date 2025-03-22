@@ -58,7 +58,7 @@ const projects = [
 
 const Filmography = () => {
   return (
-    <div className="w-full  bg-[--color-accent-dark] py-20 relative overflow-hidden">      
+    <div className="w-full  bg-[var(--color-primary-900)] py-20 relative overflow-hidden">      
       <div className="container mx-auto px-10 relative z-10 overflow-hidden">
         <h2 className="text-4xl font-normal text-[var(--color-accent-500)] mb-12 text-center">Featured Works</h2>
         

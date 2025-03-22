@@ -4,7 +4,7 @@
 @layer base {
   :root {
     /* Primary color (deep blue) */
-    --color-primary: #12142E;
+    --color-primary: #0a0b24;
     --color-primary-50: #e1e2f5;
     --color-primary-100: #c3c5eb;
     --color-primary-200: #a5a8e1;
@@ -14,7 +14,7 @@
     --color-primary-600: #2d33b8;
     --color-primary-700: #12142E;
     --color-primary-800: #0f1134;
-    --color-primary-900: #0a0b24;
+    --color-primary-900: #090A17;
     --color-primary-950: #040409;
 
     /* Secondary Color */
