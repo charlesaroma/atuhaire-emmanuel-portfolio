@@ -113,7 +113,7 @@ const Navbar = () => {
             <MotionLink
               key={link.path}
               to={link.path}
-              className={`text-[var(--color-secondary-200)] text-lg transition relative pb-2 ${
+              className={`text-[var(--color-secondary-50)] text-lg transition relative pb-2 ${
                 location.pathname === link.path
                   ? "text-[var(--color-secondary-400)] text-xl font-medium"
                   : ""

@@ -82,14 +82,16 @@ const Hero = () => {
           >
             <div className="relative w-full aspect-square lg:aspect-[5/6] overflow-hidden">
               <MotionDiv
-                className="w-full h-full rounded-2xl lg:rounded-none"
+                className="w-full h-full rounded-2xl lg:rounded-none relative"
               >
                 <img
                   src="https://ik.imagekit.io/ldeismm29/atuhaire/hero-prof.png?updatedAt=1742478117589"
                   alt="Emmanuel"
-                  className="w-full h-full object-contain lg:object-cover"
+                  className="w-full h-full object-contain lg:object-cover relative z-10"
                   loading="eager"
                 />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[var(--color-primary-900)] z-20" />
               </MotionDiv>
             </div>
           </MotionDiv>

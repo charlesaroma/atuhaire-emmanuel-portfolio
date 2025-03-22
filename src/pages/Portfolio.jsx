@@ -11,7 +11,7 @@ const Portfolio = () => {
       exit={{ opacity: 0 }}
       className="min-h-screen bg-[var(--color-primary-900)] text-white relative overflow-hidden"
     >
-      <section className="section">
+      <section className="section pt-8">
         <PortfolioHero />
       </section>
       <motion.section

@@ -1,10 +1,12 @@
-import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const PortfolioHero = () => {
   const heroImages = [
-    'https://ik.imagekit.io/ldeismm29/atuhaire/607A8493-Edit.png?updatedAt=1742478038515',
-    'https://ik.imagekit.io/ldeismm29/atuhaire/607A8450-Edit.png?updatedAt=1742478104194'
+    "https://ik.imagekit.io/ldeismm29/atuhaire/607A8493-Edit.png?updatedAt=1742478038515",
+    "https://ik.imagekit.io/ldeismm29/atuhaire/607A8450-Edit.png?updatedAt=1742478104194",
+    "https://ik.imagekit.io/ldeismm29/atuhaire/hero-prof.png?updatedAt=1742478117589",
+    "https://ik.imagekit.io/ldeismm29/atuhaire/607A8463-Edit.png?updatedAt=1742478110996"
   ];
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
 
@@ -19,7 +21,7 @@ const PortfolioHero = () => {
   return (
     <div className="relative h-screen w-full overflow-hidden">
       {/* Background Text */}
-      <motion.h1 
+      <motion.h1
         className="absolute inset-0 flex items-center justify-center text-[15vw] font-bold text-white/10 pointer-events-none z-0"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -30,7 +32,7 @@ const PortfolioHero = () => {
 
       {/* Morphing Images */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <AnimatePresence mode='wait'>
+        <AnimatePresence mode="wait">
           <motion.div
             key={currentImageIndex}
             initial={{ opacity: 0 }}
@@ -51,7 +53,7 @@ const PortfolioHero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div 
+      <motion.div
         className="absolute bottom-10 left-1/2 -translate-x-1/2"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -66,4 +68,4 @@ const PortfolioHero = () => {
   );
 };
 
-export default PortfolioHero; 
+export default PortfolioHero;
