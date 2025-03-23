@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import PortfolioHero from "../components/PortfolioHero";
-import PortfolioProjects from "../components/PortfolioProjects";
+// import PortfolioProjects from "../components/PortfolioProjects";
 import PortfolioBio from "../components/PortfolioBio";
-import ScrollToTop from '../components/ScrollToTop';
+import ScrollToTop from "../components/ScrollToTop";
 
 const Portfolio = () => {
   return (
@@ -24,14 +24,14 @@ const Portfolio = () => {
       >
         <PortfolioBio />
       </motion.section>
-      <motion.section
+      {/* <motion.section
         className="section relative z-20"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
         <PortfolioProjects />
-      </motion.section>
+      </motion.section> */}
     </motion.div>
   );
 };

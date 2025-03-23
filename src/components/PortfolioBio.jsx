@@ -1,11 +1,52 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, Film, Music, Theater } from 'lucide-react';
 
 const PortfolioBio = () => {
   const achievements = [
     {
-      icon: <Film size={24} />,
+      icon: (
+        <div className="relative w-16 h-16 mb-6">
+          <motion.div
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.5, 1, 0.5],
+            }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="absolute inset-0 bg-[var(--color-secondary-400)]/20 rounded-full blur-md"
+          />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <motion.svg 
+              className="w-10 h-10 text-[var(--color-secondary-400)]" 
+              viewBox="0 0 24 24" 
+              fill="none"
+              whileHover={{ scale: 1.1 }}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <motion.path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
+              <motion.path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: [0, 0.2, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                fill="currentColor"
+              />
+            </motion.svg>
+          </div>
+        </div>
+      ),
       title: "Acting Career",
       highlights: [
         "Kenneth Kalema in Kyaddala Season 2",
@@ -14,7 +55,33 @@ const PortfolioBio = () => {
       ]
     },
     {
-      icon: <Theater size={24} />,
+      icon: (
+        <div className="relative w-16 h-16 mb-6">
+          <motion.div
+            initial={{ rotate: 0 }}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+            className="absolute inset-0 bg-gradient-to-r from-[var(--color-primary)]/20 to-[var(--color-secondary-400)]/20 rounded-full"
+          />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <svg className="w-10 h-10 text-[var(--color-secondary-400)]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 8C14.2091 8 16 6.20914 16 4C16 1.79086 14.2091 0 12 0C9.79086 0 8 1.79086 8 4C8 6.20914 9.79086 8 12 8Z" fill="currentColor"/>
+              <motion.circle
+                cx="12"
+                cy="4"
+                r="7"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ duration: 2, repeat: Infinity }}
+                fill="none"
+              />
+            </svg>
+          </div>
+        </div>
+      ),
       title: "Theatre",
       highlights: [
         "Viscount Raoul de Chagny in The Phantom of the Opera",
@@ -22,7 +89,37 @@ const PortfolioBio = () => {
       ]
     },
     {
-      icon: <Award size={24} />,
+      icon: (
+        <div className="relative w-16 h-16 mb-6">
+          <motion.div
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.5, 1, 0.5],
+            }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="absolute inset-0 bg-[var(--color-secondary-400)]/20 rounded-full blur-md"
+          />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <motion.svg 
+              className="w-10 h-10 text-[var(--color-secondary-400)]" 
+              viewBox="0 0 24 24" 
+              fill="none"
+              whileHover={{ scale: 1.1 }}
+            >
+              <path d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z" stroke="currentColor" strokeWidth="2"/>
+              <motion.path
+                d="M8 21H16M12 15V21"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              />
+            </motion.svg>
+          </div>
+        </div>
+      ),
       title: "Awards & Nominations",
       highlights: [
         "Best Lead Male Character Nomination - Ikon Awards",
@@ -31,7 +128,36 @@ const PortfolioBio = () => {
       ]
     },
     {
-      icon: <Music size={24} />,
+      icon: (
+        <div className="relative w-16 h-16 mb-6">
+          <motion.div
+            animate={{
+              rotate: [0, 360],
+              scale: [1, 1.1, 1],
+            }}
+            transition={{ duration: 3, repeat: Infinity }}
+            className="absolute inset-0 bg-gradient-to-tr from-[var(--color-primary)]/20 via-[var(--color-secondary-400)]/20 to-transparent rounded-full"
+          />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <motion.svg 
+              className="w-10 h-10 text-[var(--color-secondary-400)]" 
+              viewBox="0 0 24 24"
+              whileHover={{ scale: 1.1 }}
+            >
+              <motion.path
+                d="M9 18V5L21 3V16M9 18C9 19.6569 7.65685 21 6 21C4.34315 21 3 19.6569 3 18C3 16.3431 4.34315 15 6 15C7.65685 15 9 16.3431 9 18Z"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
+            </motion.svg>
+          </div>
+        </div>
+      ),
       title: "Additional Talents",
       highlights: [
         "Accomplished Musician",
@@ -59,7 +185,7 @@ const PortfolioBio = () => {
   };
 
   return (
-    <div className="min-h-screen w-full py-20 relative overflow-hidden bg-[var(--color-primary-900)]/10">
+    <div className="min-h-screen w-full py-20 relative overflow-hidden bg-[var(--color-primary-900)]">
       {/* Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-[var(--color-primary)]/10 rounded-full blur-3xl"></div>
