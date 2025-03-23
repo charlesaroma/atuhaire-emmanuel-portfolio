@@ -1,8 +1,12 @@
 import React from 'react'
+import ScrollToTop from '../components/ScrollToTop'
 
 const Gallery = () => {
   return (
-    <div>Gallery</div>
+    <div>
+      <ScrollToTop />
+      Gallery
+    </div>
   )
 }
 

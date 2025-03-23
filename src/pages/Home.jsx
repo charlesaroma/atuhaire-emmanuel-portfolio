@@ -3,7 +3,7 @@ import Hero from '../components/Hero';
 import About from '../components/About';
 import Filmography from '../components/Filmography';
 import Showreel from '../components/Showreel';
-
+import ScrollToTop from '../components/ScrollToTop';
 
 const Home = () => {
   return (
@@ -13,6 +13,7 @@ const Home = () => {
       exit={{ opacity: 0 }}
       className="w-full min-h-screen bg-[var(--color-primary-900)]"
     >
+      <ScrollToTop />
       <section className="section">
         <Hero />
       </section>
@@ -25,7 +26,6 @@ const Home = () => {
       <motion.section className="section" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
         <Showreel />
       </motion.section>
- 
     </motion.div>
   );
 };

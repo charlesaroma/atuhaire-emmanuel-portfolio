@@ -1,8 +1,12 @@
 import React from 'react'
+import ScrollToTop from '../components/ScrollToTop'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <div>
+      <ScrollToTop />
+      Contact
+    </div>
   )
 }
 
