@@ -92,10 +92,10 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-[var(--color-primary-800)]/10 backdrop-blur-md border-t border-transparent overflow-hidden">
+    <footer className="relative bg-[var(--color-primary-900)] backdrop-blur-md border-t border-transparent overflow-hidden">
       {/* Decorative Elements */}
       <MotionDiv
-        className="absolute -left-20 -top-20 opacity-10 text-[var(--color-secondary-500)]"
+        className="absolute -left-20 top-10 opacity-10 text-[var(--color-secondary-500)]"
         animate={reelAnimation.animate}
       >
         <Film size={150} />

@@ -8,7 +8,7 @@ const GalleryPage = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen bg-[var(--color-primary-900)] text-white relative overflow-hidden"
+      className="min-h-screen bg-[var(--color-primary-900)] py-20 text-white relative overflow-hidden"
     >
       <ScrollToTop />
       <motion.section
