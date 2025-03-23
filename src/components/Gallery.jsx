@@ -155,10 +155,10 @@ const Gallery = () => {
       </AnimatePresence>
 
       {/* Decorative Elements - adjust for different screen sizes */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-20 md:-top-40 -right-20 md:-right-40 w-48 md:w-96 h-48 md:h-96 bg-[var(--color-primary)]/10 rounded-full blur-2xl md:blur-3xl"></div>
         <div className="absolute -bottom-20 md:-bottom-40 -left-20 md:-left-40 w-48 md:w-96 h-48 md:h-96 bg-[var(--color-secondary-400)]/10 rounded-full blur-2xl md:blur-3xl"></div>
-      </div>
+      </div> */}
     </div>
   );
 };
