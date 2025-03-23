@@ -196,7 +196,7 @@ const PortfolioBio = () => {
         {/* Header Section */}
         <div className="flex items-center mb-1">
           <div className="w-8 h-[2px] bg-[--color-primary] mr-2"></div>
-          <span className="text-[var(--color-accent-600)] text-sm tracking-wider">PORTFOLIO</span>
+          <span className="text-[var(--color-accent-600)] text-sm tracking-wider">BIO</span>
         </div>
 
         {/* Main Title with Animation */}
