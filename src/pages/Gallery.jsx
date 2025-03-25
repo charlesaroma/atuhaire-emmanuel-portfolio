@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Gallery from '../components/Gallery';
+import Gallery from '../components/galleryPage/Gallery';
 import ScrollToTop from '../components/ScrollToTop';
 
 const GalleryPage = () => {

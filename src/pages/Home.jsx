@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
-import Hero from '../components/Hero';
-import About from '../components/About';
-import Filmography from '../components/Filmography';
-import Showreel from '../components/Showreel';
+import Hero from '../components/homePage/Hero';
+import About from '../components/homePage/About';
+import Filmography from '../components/homePage/Filmography';
+import Showreel from '../components/homePage/Showreel';
 import ScrollToTop from '../components/ScrollToTop';
 
 const Home = () => {

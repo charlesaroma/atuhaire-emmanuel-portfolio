@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import PortfolioHero from "../components/PortfolioHero";
+import PortfolioHero from "../components/portfolioPage/PortfolioHero";
 // import PortfolioProjects from "../components/PortfolioProjects";
-import PortfolioBio from "../components/PortfolioBio";
+import PortfolioBio from "../components/portfolioPage/PortfolioBio";
 import ScrollToTop from "../components/ScrollToTop";
 
 const Portfolio = () => {
