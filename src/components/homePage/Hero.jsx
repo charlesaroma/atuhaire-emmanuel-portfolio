@@ -1,11 +1,13 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // Fix linter warning by using the motion import
 const MotionDiv = motion.div;
 
 const Hero = () => {
+  const navigate = useNavigate();
   const roles = ["Actor", "Storyteller", "Performer", "Writer", "Voice Artist"];
   const [currentRole, setCurrentRole] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -31,6 +33,13 @@ const Hero = () => {
       clearInterval(imageInterval);
     };
   }, []);
+
+  const scrollToShowreel = () => {
+    const showreelSection = document.getElementById('showreel');
+    if (showreelSection) {
+      showreelSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <MotionDiv
@@ -75,6 +84,7 @@ const Hero = () => {
               <MotionDiv
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={scrollToShowreel}
                 className="bg-transparent cursor-pointer border-2 border-[var(--color-accent-500)] text-[var(--color-accent-500)] py-2  px-4 md:px-8 md:py-3 rounded-lg text-base sm:text-lg font-medium flex items-center w-auto justify-center"
               >
                 Watch Reel <Play size={18} className="ml-2" />
@@ -82,6 +92,7 @@ const Hero = () => {
               <MotionDiv
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => navigate('/contact')}
                 className="text-[var(--color-accent-600)] cursor-pointer px-4 py-2 sm:px-6 md:px-8 md:py-3 rounded-lg text-base sm:text-lg font-normal flex items-center w-full sm:w-auto justify-center"
               >
                 Contact Me 
