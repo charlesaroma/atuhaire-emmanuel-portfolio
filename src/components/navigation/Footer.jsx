@@ -200,7 +200,7 @@ const Footer = () => {
               <li className="flex items-center space-x-2 text-[var(--color-accent-600)] text-sm group justify-center md:justify-start">
                 <Phone size={16} className="group-hover:text-[var(--color-secondary-300)]" />
                 <span className="group-hover:text-[var(--color-secondary-300)] transition-colors duration-300">
-                  +256 123 456 789
+                  +256 745 652 295
                 </span>
               </li>
               <li className="flex items-center space-x-2 text-[var(--color-accent-600)] text-sm group justify-center md:justify-start">

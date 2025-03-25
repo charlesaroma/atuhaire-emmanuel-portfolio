@@ -7,22 +7,10 @@ const MotionButton = motion.button;
 
 const projects = [
   {
-    title: "When You Become Me",
-    category: "Film | Drama",
-    year: "2023",
-    image: "https://ik.imagekit.io/ldeismm29/atuhaire/Movie-posters/Emma%201.jpeg?updatedAt=1742487333191"
-  },
-  {
     title: "Jimbi",
     category: "Fantasy | Horror ",
     year: "2024",
     image: "https://ik.imagekit.io/ldeismm29/atuhaire/Movie-posters/emma2.jpeg?updatedAt=1742487768793"
-  },
-  {
-    title: "Enkuba",
-    category: "Film | Drama",
-    year: "2022",
-    image: "https://ik.imagekit.io/ldeismm29/atuhaire/Movie-posters/Screenshot%202025-03-20%20201109.png?updatedAt=1742490687376"
   },
   {
     title: "Cross Roads",
@@ -30,6 +18,26 @@ const projects = [
     year: "2024",
     image: "https://ik.imagekit.io/ldeismm29/atuhaire/Movie-posters/Screenshot%202025-03-20%20200646.png?updatedAt=1742490419828"
   },
+  {
+    title: "When You Become Me",
+    category: "Film | Drama",
+    year: "2023",
+    image: "https://ik.imagekit.io/ldeismm29/atuhaire/Movie-posters/Emma%201.jpeg?updatedAt=1742487333191"
+  },
+  {
+    title: "Sanyu",
+    category: "TV Series | Drama",
+    year: "2021",
+    image: "https://ik.imagekit.io/ldeismm29/atuhaire/Movie-posters/Screenshot%202025-03-25%20192051.png?updatedAt=1742919674989"
+  },
+
+  {
+    title: "Enkuba",
+    category: "Film | Drama",
+    year: "2022",
+    image: "https://ik.imagekit.io/ldeismm29/atuhaire/Movie-posters/Screenshot%202025-03-20%20201109.png?updatedAt=1742490687376"
+  },
+
   {
     title: "Kyaddala",
     category: "TV Series | Drama",
@@ -43,16 +51,16 @@ const projects = [
     image: "https://ik.imagekit.io/ldeismm29/atuhaire/Movie-posters/Screenshot%202025-03-20%20201411.png?updatedAt=1742490846468"
   },
   {
-    title: "The Chwezi Dynasty",
-    category: "Film | Drama",
-    year: "2022",
-    image: "https://ik.imagekit.io/ldeismm29/atuhaire/Movie-posters/The%20Cwezi%20Dynasty.jpg?updatedAt=1742491929605"
-  },
-  {
     title: "Ethania",
     category: "Short-Film | Drama",
     year: "2022",
     image: "https://ik.imagekit.io/ldeismm29/atuhaire/Movie-posters/Screenshot%202025-03-20%20203007.png?updatedAt=1742491798456"
+  },
+  {
+    title: "The Chwezi Dynasty",
+    category: "Film | Drama",
+    year: "2022",
+    image: "https://ik.imagekit.io/ldeismm29/atuhaire/Movie-posters/The%20Cwezi%20Dynasty.jpg?updatedAt=1742491929605"
   }
 ]
 

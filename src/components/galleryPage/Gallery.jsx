@@ -27,10 +27,102 @@ const Gallery = () => {
     {
       id: 4,
       url: "https://ik.imagekit.io/ldeismm29/atuhaire/607A8463-Edit.png",
-      category: "Events",
+      category: "Portraits",
       description: "Professional Headshot Collection"
     },
-    // Add more images here with their categories and descriptions
+    // Behind the Scenes
+    {
+      id: 5,
+      url: "https://ik.imagekit.io/ldeismm29/atuhaire/Gallery/WhatsApp%20Image%202025-03-25%20at%2019.49.02_ae94a6a0.jpg?updatedAt=1742921589043",
+      category: "Behind the Scenes",
+      description: "On-Set Cinematography Setup"
+    },
+    {
+      id: 6,
+      url: "https://ik.imagekit.io/ldeismm29/atuhaire/Gallery/WhatsApp%20Image%202025-03-25%20at%2019.49.02_9c8ff216.jpg?updatedAt=1742921584332",
+      category: "Behind the Scenes",
+      description: "Camera Equipment Setup"
+    },
+    {
+      id: 7,
+      url: "https://ik.imagekit.io/ldeismm29/atuhaire/Gallery/WhatsApp%20Image%202025-03-25%20at%2019.49.00_c558e85a.jpg?updatedAt=1742921584254",
+      category: "Behind the Scenes",
+      description: "Location Scouting Moment"
+    },
+    {
+      id: 8,
+      url: "https://ik.imagekit.io/ldeismm29/atuhaire/Gallery/WhatsApp%20Image%202025-03-25%20at%2019.48.57_d22a83e1.jpg?updatedAt=1742921578548",
+      category: "Behind the Scenes",
+      description: "Production Team in Action"
+    },
+    {
+      id: 9,
+      url: "https://ik.imagekit.io/ldeismm29/atuhaire/Gallery/WhatsApp%20Image%202025-03-25%20at%2019.48.57_177d50a8.jpg?updatedAt=1742921578422",
+      category: "Behind the Scenes",
+      description: "Technical Setup Process"
+    },
+    {
+      id: 10,
+      url: "https://ik.imagekit.io/ldeismm29/atuhaire/Gallery/WhatsApp%20Image%202025-03-25%20at%2019.48.56_a8db490d.jpg?updatedAt=1742921578418",
+      category: "Behind the Scenes",
+      description: "Pre-Production Planning"
+    },
+    // Events
+    {
+      id: 11,
+      url: "https://ik.imagekit.io/ldeismm29/atuhaire/Gallery/WhatsApp%20Image%202025-03-25%20at%2019.49.00_a3de1f0b.jpg?updatedAt=1742921584548",
+      category: "Events",
+      description: "Live Event Coverage"
+    },
+    {
+      id: 12,
+      url: "https://ik.imagekit.io/ldeismm29/atuhaire/Gallery/WhatsApp%20Image%202025-03-25%20at%2019.49.00_aec7d8ba.jpg?updatedAt=1742921584125",
+      category: "Events",
+      description: "Event Photography Session"
+    },
+    {
+      id: 13,
+      url: "https://ik.imagekit.io/ldeismm29/atuhaire/Gallery/WhatsApp%20Image%202025-03-25%20at%2019.48.59_159356d7.jpg?updatedAt=1742921583940",
+      category: "Events",
+      description: "Crowd Coverage"
+    },
+    {
+      id: 14,
+      url: "https://ik.imagekit.io/ldeismm29/atuhaire/Gallery/WhatsApp%20Image%202025-03-25%20at%2019.48.58_3111a461.jpg?updatedAt=1742921578141",
+      category: "Events",
+      description: "Event Atmosphere Capture"
+    },
+    // Press
+    {
+      id: 15,
+      url: "https://ik.imagekit.io/ldeismm29/atuhaire/Gallery/WhatsApp%20Image%202025-03-25%20at%2019.48.56_12d2d9f0.jpg?updatedAt=1742921578756",
+      category: "Press",
+      description: "Press Conference Coverage"
+    },
+    {
+      id: 16,
+      url: "https://ik.imagekit.io/ldeismm29/atuhaire/Gallery/WhatsApp%20Image%202025-03-25%20at%2019.48.55_1bcb4b39.jpg?updatedAt=1742921578674",
+      category: "Press",
+      description: "Media Interview Session"
+    },
+    {
+      id: 17,
+      url: "https://ik.imagekit.io/ldeismm29/atuhaire/Gallery/WhatsApp%20Image%202025-03-25%20at%2019.48.56_d5e0187b.jpg?updatedAt=1742921578749",
+      category: "Press",
+      description: "Press Event Documentation"
+    },
+    {
+      id: 18,
+      url: "https://ik.imagekit.io/ldeismm29/atuhaire/Gallery/WhatsApp%20Image%202025-03-25%20at%2019.48.59_8c9be448.jpg?updatedAt=1742921584326",
+      category: "Press",
+      description: "Media Coverage Setup"
+    },
+    {
+      id: 19,
+      url: "https://ik.imagekit.io/ldeismm29/atuhaire/Gallery/WhatsApp%20Image%202025-03-25%20at%2019.49.00_a3de1f0b.jpg?updatedAt=1742921584548",
+      category: "Press",
+      description: "Press Event Highlights"
+    }
   ];
 
   /* Category Filter State */
