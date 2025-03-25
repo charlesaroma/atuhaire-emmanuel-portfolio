@@ -128,7 +128,7 @@ const Footer = () => {
       >
         <Star 
           size={70} 
-          className="text-[var(--color-secondary-500)] drop-shadow-[0_0_10px_var(--color-secondary-500)] filter-none" 
+          className="text-[var(--color-secondary-500)] drop-shadow-[0_0_10px_var(--color-accent-600)] filter-none" 
         />
       </MotionDiv>
 
@@ -142,10 +142,10 @@ const Footer = () => {
             className="space-y-4 relative group text-center md:text-left"
           >
             <div className="absolute inset-0 bg-gradient-radial from-[var(--color-secondary-400)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-            <h2 className="text-2xl font-medium text-[var(--color-secondary-50)] relative">
+            <h2 className="text-2xl font-medium text-[var(--color-secondary)] relative">
               Atuhaire
             </h2>
-            <p className="text-[var(--color-secondary-300)] text-sm leading-relaxed">
+            <p className="text-[var(--color-accent-600)] text-sm leading-relaxed">
               Ugandan actor and performer, bringing stories to life through authentic performances and compelling narratives.
             </p>
           </MotionDiv>
@@ -158,7 +158,7 @@ const Footer = () => {
             transition={{ delay: 0.1 }}
             className="space-y-4 text-center md:text-left"
           >
-            <h3 className="text-lg font-medium text-[var(--color-secondary-50)]">
+            <h3 className="text-lg font-medium text-[var(--color-secondary)]">
               Quick Links
             </h3>
             <ul className="space-y-2">
@@ -171,7 +171,7 @@ const Footer = () => {
                 >
                   <MotionLink
                     to={link.path}
-                    className="text-[var(--color-secondary-300)] hover:text-[var(--color-secondary-500)] transition-colors duration-300 text-sm flex items-center gap-2 justify-center md:justify-start"
+                    className="text-[var(--color-accent-600)] hover:text-[var(--color-secondary-500)] transition-colors duration-300 text-sm flex items-center gap-2 justify-center md:justify-start"
                     whileHover={{ x: 5 }}
                   >
                     <span>•</span> {link.name}
@@ -189,23 +189,23 @@ const Footer = () => {
             transition={{ delay: 0.2 }}
             className="space-y-4 text-center md:text-left"
           >
-            <h3 className="text-lg font-medium text-[var(--color-secondary-50)]">Contact</h3>
+            <h3 className="text-lg font-medium text-[var(--color-secondary)]">Contact</h3>
             <ul className="space-y-3">
-              <li className="flex items-center space-x-2 text-[var(--color-secondary-300)] text-sm group justify-center md:justify-start">
-                <Mail size={16} className="group-hover:text-[var(--color-secondary-400)]" />
-                <span className="group-hover:text-[var(--color-secondary-400)] transition-colors duration-300">
-                  atuhaire.emmanuel@gmail.com
+              <li className="flex items-center space-x-2 text-[var(--color-accent-600)] text-sm group justify-center md:justify-start">
+                <Mail size={16} className="group-hover:text-[var(--color-accent-600)]" />
+                <span className="group-hover:text-[var(--color-secondary-300)] transition-colors duration-300">
+                  emmanuelatuhaire24@gmail.com
                 </span>
               </li>
-              <li className="flex items-center space-x-2 text-[var(--color-secondary-300)] text-sm group justify-center md:justify-start">
-                <Phone size={16} className="group-hover:text-[var(--color-secondary-400)]" />
-                <span className="group-hover:text-[var(--color-secondary-400)] transition-colors duration-300">
+              <li className="flex items-center space-x-2 text-[var(--color-accent-600)] text-sm group justify-center md:justify-start">
+                <Phone size={16} className="group-hover:text-[var(--color-secondary-300)]" />
+                <span className="group-hover:text-[var(--color-secondary-300)] transition-colors duration-300">
                   +256 123 456 789
                 </span>
               </li>
-              <li className="flex items-center space-x-2 text-[var(--color-secondary-300)] text-sm group justify-center md:justify-start">
-                <MapPin size={16} className="group-hover:text-[var(--color-secondary-400)]" />
-                <span className="group-hover:text-[var(--color-secondary-400)] transition-colors duration-300">
+              <li className="flex items-center space-x-2 text-[var(--color-accent-600)] text-sm group justify-center md:justify-start">
+                <MapPin size={16} className="group-hover:text-[var(--color-secondary-300)]" />
+                <span className="group-hover:text-[var(--color-secondary-300)] transition-colors duration-300">
                   Kampala, Uganda
                 </span>
               </li>
@@ -220,7 +220,7 @@ const Footer = () => {
             transition={{ delay: 0.3 }}
             className="space-y-4 text-center md:text-left"
           >
-            <h3 className="text-lg font-medium text-[var(--color-secondary-50)]">Connect</h3>
+            <h3 className="text-lg font-medium text-[var(--color-secondary)]">Connect</h3>
             <div className="flex space-x-4 justify-center md:justify-start">
               {socialLinks.map((social, index) => (
                 <MotionA
@@ -228,7 +228,7 @@ const Footer = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--color-secondary-50)] hover:text-[var(--color-secondary-400)] transition relative"
+                  className="text-[var(--color-accent-600)] hover:text-[var(--color-secondary-300)] transition relative"
                   whileHover={{ 
                     scale: 1.2,
                     rotate: 360,
@@ -248,10 +248,10 @@ const Footer = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mt-12 pt-8 border-t border-[var(--color-accent-500)]/15 text-center relative"
+          className="mt-12 pt-8 border-t border-[var(--color-accent-600)]/15 text-center relative"
         >
-          <div className="absolute left-0 z-10 right-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-[var(--color-accent-400)]/50 to-transparent" />
-          <p className="text-[var(--color-accent-300)] text-sm">
+          <div className="absolute left-0 z-10 right-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-[var(--color-accent-600)]/50 to-transparent" />
+          <p className="text-[var(--color-accent-600)] text-sm">
             © {new Date().getFullYear()} Emmanuel Atuhaire. All rights reserved.
           </p>
         </MotionDiv>

@@ -14,7 +14,7 @@ const Showreel = () => {
   return (
     <section id="showreel" className="w-full py-10 md:py-16 lg:py-20">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-[var(--color-accent-500)] mb-8 sm:mb-12 text-center">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-[var(--color-accent-500)] mb-8 md:mb-12 text-center">
           Showreel
         </h2>
         
@@ -59,9 +59,10 @@ const Showreel = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setIsPlaying(false)}
-                className="absolute -top-10 -right-16 w-12 h-12 bg-[var(--color-accent-500)] rounded-full flex items-center justify-center shadow-xl hover:bg-[var(--color-accent-600)] transition-colors z-[10000] group"
+                className="absolute -top-12 md:-top-11 lg:-top-10 right-0 w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-[var(--color-accent-500)] rounded-full flex items-center justify-center shadow-xl hover:bg-[var(--color-accent-600)] transition-colors z-[10000] group"
+                aria-label="Close video"
               >
-                <X size={28} className="text-[var(--color-accent-600)] group-hover:text-[var(--color-primary-900)] transition-colors" />
+                <X size={24} className="text-[var(--color-accent-600)] group-hover:text-[var(--color-primary-900)] transition-colors" />
               </MotionButton>
               <div className="relative aspect-video w-full rounded-lg overflow-hidden">
                 <iframe

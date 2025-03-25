@@ -204,7 +204,7 @@ const PortfolioBio = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-6xl font-normal text-white mb-12 leading-tight"
+          className="text-4xl md:text-6xl font-normal text-[var(--color-accent-500)] mb-12 leading-tight"
         >
           EMMANUEL <br />
           <span className="text-[var(--color-secondary-400)]">ATUHAIRE</span>
@@ -237,11 +237,11 @@ const PortfolioBio = () => {
               className="group relative"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary)]/20 to-transparent rounded-lg transform group-hover:scale-105 transition-transform duration-300"></div>
-              <div className="relative bg-[var(--color-primary-800)]/30 backdrop-blur-sm rounded-lg p-8 border border-white/10">
+              <div className="relative bg-[var(--color-primary-800)]/30 backdrop-blur-sm rounded-lg p-8 border border-[var(--color-accent-600)]/20">
                 <div className="text-[var(--color-secondary-400)] mb-6 group-hover:scale-110 transition-transform duration-300">
                   {achievement.icon}
                 </div>
-                <h3 className="text-xl font-normal text-white mb-6">
+                <h3 className="text-xl font-normal text-[var(--color-accent-600)] mb-6">
                   {achievement.title}
                 </h3>
                 <ul className="space-y-3">
@@ -267,13 +267,13 @@ const PortfolioBio = () => {
           viewport={{ once: true }}
           className="mt-20 relative"
         >
-          <div className="absolute left-0 top-0 text-[120px] leading-none text-[var(--color-secondary-400)]/10 font-bold">"</div>
+          <div className="absolute left-0 top-0 text-[120px] leading-none text-[var(--color-accent-600)] font-bold">"</div>
           <p className="text-[var(--color-accent-600)] text-sm md:text-base leading-relaxed text-center max-w-3xl mx-auto pl-12 pr-12">
             A medical scholar with a certificate in medical records and a talented musician, 
             Atuhaire's unique blend of artistic and academic pursuits has equipped him with 
             a distinct perspective and creative approach.
           </p>
-          <div className="absolute right-0 bottom-0 text-[120px] leading-none text-[var(--color-secondary-400)]/10 font-bold">"</div>
+          <div className="absolute right-0 bottom-0 text-[120px] leading-none text-[var(--color-accent-600)] font-bold">"</div>
         </motion.div>
       </div>
     </div>

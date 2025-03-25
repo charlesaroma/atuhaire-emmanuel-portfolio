@@ -22,7 +22,7 @@ const PortfolioHero = () => {
     <div className="relative h-[calc(100svh-4rem)] md:h-[calc(100svh-5rem)] w-full overflow-hidden">
       {/* Background Text */}
       <motion.h1
-        className="absolute inset-0 flex items-center justify-center text-[10vw] sm:text-[12vw] md:text-[15vw] font-bold text-white/10 pointer-events-none z-0"
+        className="absolute inset-0 flex items-center justify-center text-[15vw] md:text-[16vw] lg:text-[17vw] font-bold text-[var(--color-accent-600)]/20 pointer-events-none z-0"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -65,7 +65,7 @@ const PortfolioHero = () => {
         transition={{ delay: 1 }}
       >
         <div className="flex flex-col items-center gap-2">
-          <div className="w-[1px] h-5 sm:h-6 md:h-8 lg:h-10 bg-white/20"></div>
+          <div className="w-[1px] h-5 sm:h-6 md:h-8 lg:h-10 bg-[var(--color-accent-600)]/30"></div>
           <span className="text-[8px] sm:text-[10px] md:text-xs tracking-widest opacity-50">SCROLL</span>
         </div>
       </motion.div>

@@ -231,7 +231,7 @@ const Navbar = () => {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-300 hover:text-[--color-primary] transition-colors duration-300"
+                      className="text-[var(--color-accent-600)] hover:text-[--color-primary] transition-colors duration-300"
                       whileHover={{ scale: 1.2, rotate: 360 }}
                       whileTap={{ scale: 0.9 }}
                     >
