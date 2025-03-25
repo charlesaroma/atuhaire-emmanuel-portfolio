@@ -229,7 +229,7 @@ const Contact = () => {
                 type="submit"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group bg-transparent border border-[--color-primary] hover:bg-[--color-primary] text-[var(--color-accent-600)] px-5 py-2 md:px-6 md:py-2 rounded-lg font-medium flex items-center gap-2 transition-all duration-300 shadow-[0_4px_6px_-1px_rgba(123,97,255,0.1)]"
+                className="group bg-transparent border cursor-pointer border-[--color-primary] hover:bg-[--color-primary] text-[var(--color-accent-600)] px-5 py-2 md:px-6 md:py-2 rounded-lg font-medium flex items-center gap-2 transition-all duration-300 shadow-[0_4px_6px_-1px_rgba(123,97,255,0.1)]"
               >
                 <Send className="w-4 h-4" />
                 <span>SEND MESSAGE</span>
