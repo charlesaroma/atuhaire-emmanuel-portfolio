@@ -92,7 +92,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-[var(--color-primary-900)] backdrop-blur-md border-t border-transparent overflow-hidden">
+    <footer className="relative bg-[var(--color-primary-900)] backdrop-blur-md border-t border-[var(--color-accent-600)]/10 overflow-hidden">
       {/* Decorative Elements */}
       <MotionDiv
         className="absolute -left-20 top-10 opacity-10 text-[var(--color-secondary-500)]"

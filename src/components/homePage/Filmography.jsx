@@ -58,11 +58,11 @@ const projects = [
 
 const Filmography = () => {
   return (
-    <div className="w-full  bg-[var(--color-primary-900)] py-20 relative overflow-hidden">      
-      <div className="container mx-auto px-10 relative z-10 overflow-hidden">
-        <h2 className="text-4xl font-normal text-[var(--color-accent-500)] mb-12 text-center">Featured Works</h2>
+    <div className="w-full bg-[var(--color-primary-900)] py-12 sm:py-16 md:py-20 relative overflow-hidden">      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 overflow-hidden">
+        <h2 className="text-3xl sm:text-4xl font-normal text-[var(--color-accent-500)] mb-8 sm:mb-12 text-center">Featured Works</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 gap-y-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 gap-y-8 sm:gap-y-12">
           {projects.map((project, index) => (
             <MotionDiv
               key={index}
@@ -72,7 +72,7 @@ const Filmography = () => {
               transition={{ delay: index * 0.1 }}
               className="group cursor-pointer mx-auto w-full max-w-[280px]"
             >
-              <div className="h-[400px] rounded-lg overflow-hidden mb-4 bg-black">
+              <div className="h-[300px] sm:h-[350px] md:h-[400px] rounded-lg overflow-hidden mb-3 sm:mb-4 bg-black">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -80,8 +80,8 @@ const Filmography = () => {
                   loading={index > 2 ? "lazy" : "eager"}
                 />
               </div>
-              <h3 className="text-xl font-semibold text-white text-center md:text-left">{project.title}</h3>
-              <p className="text-gray-300 text-center md:text-left">{project.category} • {project.year}</p>
+              <h3 className="text-lg sm:text-xl font-semibold text-white text-center md:text-left">{project.title}</h3>
+              <p className="text-sm sm:text-base text-gray-300 text-center md:text-left">{project.category} • {project.year}</p>
             </MotionDiv>
           ))}
         </div>
