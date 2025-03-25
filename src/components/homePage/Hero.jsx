@@ -8,12 +8,28 @@ const MotionDiv = motion.div;
 const Hero = () => {
   const roles = ["Actor", "Storyteller", "Performer", "Writer", "Voice Artist"];
   const [currentRole, setCurrentRole] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const heroImages = [
+    "https://ik.imagekit.io/ldeismm29/atuhaire/607A8493-Edit.png?updatedAt=1742478038515",
+    "https://ik.imagekit.io/ldeismm29/atuhaire/607A8450-Edit.png?updatedAt=1742478104194",
+    "https://ik.imagekit.io/ldeismm29/atuhaire/hero-prof.png?updatedAt=1742478117589",
+    "https://ik.imagekit.io/ldeismm29/atuhaire/607A8463-Edit.png?updatedAt=1742478110996"
+  ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const roleInterval = setInterval(() => {
       setCurrentRole((prev) => (prev + 1) % roles.length);
     }, 2500);
-    return () => clearInterval(interval);
+
+    const imageInterval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+    }, 3500);
+
+    return () => {
+      clearInterval(roleInterval);
+      clearInterval(imageInterval);
+    };
   }, []);
 
   return (
@@ -81,18 +97,25 @@ const Hero = () => {
             className="flex-1 flex justify-center lg:justify-end w-full max-w-[280px] md:max-w-[340px] lg:max-w-[500px] mx-auto"
           >
             <div className="relative w-full aspect-square lg:aspect-[5/6] overflow-hidden">
-              <MotionDiv
-                className="w-full h-full rounded-2xl lg:rounded-none relative"
-              >
-                <img
-                  src="https://ik.imagekit.io/ldeismm29/atuhaire/hero-prof.png?updatedAt=1742478117589"
-                  alt="Emmanuel"
-                  className="w-full h-full object-contain lg:object-cover relative z-10"
-                  loading="eager"
-                />
-                {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[var(--color-primary-900)] z-20" />
-              </MotionDiv>
+              <AnimatePresence mode="wait">
+                <MotionDiv
+                  key={currentImageIndex}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 1 }}
+                  className="w-full h-full rounded-2xl lg:rounded-none relative"
+                >
+                  <img
+                    src={heroImages[currentImageIndex]}
+                    alt="Emmanuel"
+                    className="w-full h-full object-contain lg:object-cover relative z-10"
+                    loading={currentImageIndex === 0 ? "eager" : "lazy"}
+                  />
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[var(--color-primary-900)] z-20" />
+                </MotionDiv>
+              </AnimatePresence>
             </div>
           </MotionDiv>
         </div>
