@@ -135,7 +135,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-[var(--color-accent-600)]">{info.title}</p>
-                  <p className="text-white">{info.value}</p>
+                  <p className="text-[var(--color-accent-600)]">{info.value}</p>
                 </div>
               </a>
             ))}
@@ -143,7 +143,7 @@ const Contact = () => {
 
           {/* Social Links */}
           <div className="space-y-4">
-            <h3 className="text-lg text-white">Follow Me</h3>
+            <h3 className="text-lg text-[var(--color-accent-600)]">Follow Me</h3>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => (
                 <motion.a
@@ -183,7 +183,7 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full bg-[var(--color-primary-800)]/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--color-secondary-400)] transition-colors"
+                  className="w-full bg-[var(--color-primary-800)]/30 border border-white/10 rounded-lg px-4 py-3 text-[var(--color-accent-600)] focus:outline-none focus:border-[var(--color-secondary-400)] transition-colors"
                   required
                 />
               </div>
@@ -195,7 +195,7 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full bg-[var(--color-primary-800)]/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--color-secondary-400)] transition-colors"
+                  className="w-full bg-[var(--color-primary-800)]/30 border border-white/10 rounded-lg px-4 py-3 text-[var(--color-accent-600)] focus:outline-none focus:border-[var(--color-secondary-400)] transition-colors"
                   required
                 />
               </div>
@@ -208,7 +208,7 @@ const Contact = () => {
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                className="w-full bg-[var(--color-primary-800)]/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--color-secondary-400)] transition-colors"
+                className="w-full bg-[var(--color-primary-800)]/30 border border-white/10 rounded-lg px-4 py-3 text-[var(--color-accent-600)] focus:outline-none focus:border-[var(--color-secondary-400)] transition-colors"
                 required
               />
             </div>
@@ -220,7 +220,7 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 rows="6"
-                className="w-full bg-[var(--color-primary-800)]/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--color-secondary-400)] transition-colors resize-none"
+                className="w-full bg-[var(--color-primary-800)]/30 border border-white/10 rounded-lg px-4 py-3 text-[var(--color-accent-600)] focus:outline-none focus:border-[var(--color-secondary-400)] transition-colors resize-none"
                 required
               ></textarea>
             </div>
@@ -229,7 +229,7 @@ const Contact = () => {
                 type="submit"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group bg-transparent border border-[--color-primary] hover:bg-[--color-primary] text-white px-5 py-2 md:px-6 md:py-2 rounded-lg font-medium flex items-center gap-2 transition-all duration-300 shadow-[0_4px_6px_-1px_rgba(123,97,255,0.1)]"
+                className="group bg-transparent border border-[--color-primary] hover:bg-[--color-primary] text-[var(--color-accent-600)] px-5 py-2 md:px-6 md:py-2 rounded-lg font-medium flex items-center gap-2 transition-all duration-300 shadow-[0_4px_6px_-1px_rgba(123,97,255,0.1)]"
               >
                 <Send className="w-4 h-4" />
                 <span>SEND MESSAGE</span>
