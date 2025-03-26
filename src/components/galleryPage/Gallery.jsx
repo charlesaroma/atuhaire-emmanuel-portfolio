@@ -6,30 +6,6 @@ const Gallery = () => {
   
   /* Image Data */
   const images = [
-    {
-      id: 1,
-      url: "https://ik.imagekit.io/ldeismm29/atuhaire/607A8493-Edit.png?updatedAt=1742478038515",
-      category: "Portraits",
-      description: "Contemplative Monochrome Portrait"
-    },
-    {
-      id: 2,
-      url: "https://ik.imagekit.io/ldeismm29/atuhaire/hero-prof.png?updatedAt=1742478117589",
-      category: "Portraits",
-      description: "Dramatic Studio Lighting"
-    },
-    {
-      id: 3,
-      url: "https://ik.imagekit.io/ldeismm29/atuhaire/607A8450-Edit.png?updatedAt=1742478104194",
-      category: "Portraits",
-      description: "Artistic Black & White Series"
-    },
-    {
-      id: 4,
-      url: "https://ik.imagekit.io/ldeismm29/atuhaire/607A8463-Edit.png",
-      category: "Portraits",
-      description: "Professional Headshot Collection"
-    },
     // Behind the Scenes
     {
       id: 5,
@@ -122,11 +98,35 @@ const Gallery = () => {
       url: "https://ik.imagekit.io/ldeismm29/atuhaire/Gallery/WhatsApp%20Image%202025-03-25%20at%2019.49.00_a3de1f0b.jpg?updatedAt=1742921584548",
       category: "Press",
       description: "Press Event Highlights"
-    }
+    },
+    {
+      id: 1,
+      url: "https://ik.imagekit.io/ldeismm29/atuhaire/607A8493-Edit.png?updatedAt=1742478038515",
+      category: "Portraits",
+      description: "Contemplative Monochrome Portrait"
+    },
+    {
+      id: 2,
+      url: "https://ik.imagekit.io/ldeismm29/atuhaire/hero-prof.png?updatedAt=1742478117589",
+      category: "Portraits",
+      description: "Dramatic Studio Lighting"
+    },
+    {
+      id: 3,
+      url: "https://ik.imagekit.io/ldeismm29/atuhaire/607A8450-Edit.png?updatedAt=1742478104194",
+      category: "Portraits",
+      description: "Artistic Black & White Series"
+    },
+    {
+      id: 4,
+      url: "https://ik.imagekit.io/ldeismm29/atuhaire/607A8463-Edit.png",
+      category: "Portraits",
+      description: "Professional Headshot Collection"
+    },
   ];
 
   /* Category Filter State */
-  const categories = ["All", "Portraits", "Behind the Scenes", "Events", "Press"];
+  const categories = ["All", "Behind the Scenes", "Events", "Press", "Portraits"];
   const [activeCategory, setActiveCategory] = useState("All");
 
   /* Filter Images Based on Category */
