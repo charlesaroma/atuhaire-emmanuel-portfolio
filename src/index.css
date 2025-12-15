@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+body {
+  opacity: 0;
+}
 /* Custom Theme Extensions */
 @layer base {
   :root {
